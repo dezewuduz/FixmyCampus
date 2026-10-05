@@ -17,11 +17,11 @@ public class Ticket
     public DateTime? ResolvedAt { get; set; }
 
     // Who reported it
-    public Guid CreatedById { get; set; }
+    public int CreatedById { get; set; }
     public User CreatedBy { get; set; } = null!;
 
     // Who is fixing it (optional until assigned)
-    public Guid? AssignedTechnicianId { get; set; }
+    public int? AssignedTechnicianId { get; set; }
     public Technician? AssignedTechnician { get; set; }
 
     public ICollection<TicketHistory> History { get; set; } = new List<TicketHistory>();

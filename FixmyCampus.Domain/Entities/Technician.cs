@@ -5,7 +5,6 @@ namespace FixmyCampus.Domain.Entities;
 public class Technician : User
 {
    public int TechnicianId { get; set; }
-   public UserRole Role { get; set; } = UserRole.Technician;
    public TicketCategory Specialization { get; set; }
     public bool IsAvailable { get; set; } = true;
 

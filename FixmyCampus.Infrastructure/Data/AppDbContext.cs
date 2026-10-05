@@ -1,11 +1,12 @@
 using FixmyCampus.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace FixmyCampus.Api.Data;
+namespace FixmyCampus.Infrastructure.Data;
 
 public class AppDbContext : DbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
     {
     }
 
@@ -17,8 +18,9 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Picks up every IEntityTypeConfiguration<T> in this assembly
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(
+            typeof(AppDbContext).Assembly);
+
         base.OnModelCreating(modelBuilder);
     }
 }

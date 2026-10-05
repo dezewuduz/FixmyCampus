@@ -15,3 +15,6 @@ C:\Users\HP\FixmyCampus\FixmyCampus.Infrastructure\obj\Debug\net10.0\FixmyCampus
 C:\Users\HP\FixmyCampus\FixmyCampus.Infrastructure\obj\Debug\net10.0\refint\FixmyCampus.Infrastructure.dll
 C:\Users\HP\FixmyCampus\FixmyCampus.Infrastructure\obj\Debug\net10.0\FixmyCampus.Infrastructure.pdb
 C:\Users\HP\FixmyCampus\FixmyCampus.Infrastructure\obj\Debug\net10.0\ref\FixmyCampus.Infrastructure.dll
+C:\Users\HP\FixmyCampus\FixmyCampus.Infrastructure\obj\Debug\net10.0\FixmyCampus.Infrastructure.sourcelink.json
+C:\Users\HP\FixmyCampus\FixmyCampus.Infrastructure\bin\Debug\net10.0\FixmyCampus.Infrastructure.runtimeconfig.json
+C:\Users\HP\FixmyCampus\FixmyCampus.Infrastructure\obj\Debug\net10.0\FixmyCampus.Infrastructure.genruntimeconfig.cache

@@ -10,9 +10,6 @@ public class AdminConfiguration : IEntityTypeConfiguration<Admin>
     {
         builder.Property(a => a.Specialization)
             .HasMaxLength(100);
-        builder.WithOne(a => a.Admin)
-        .withmany()
-            .HasForeignKey<Admin>(a => a.Id)
-            .OnDelete(DeleteBehavior.Cascade);
+       
     }
 }

@@ -13,7 +13,7 @@ public class TicketHistory
     public TicketStatus NewStatus { get; set; }
 
     // Fixes your CS0246 error: a real ID plus a navigation to User
-    public Guid ChangedById { get; set; }
+    public int ChangedById { get; set; }
     public User ChangedBy { get; set; } = null!;
 
     public string? Comment { get; set; }
