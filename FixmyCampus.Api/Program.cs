@@ -36,6 +36,10 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 
+builder.Services.AddScoped<ITechnicianService, TechnicianService>();
+
+builder.Services.AddScoped<ITechnicianRepository,TechnicianRepository>();
+
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasherService>();
 

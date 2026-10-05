@@ -1,9 +1,8 @@
 namespace FixmyCampus.Domain.Enums;
 public enum TicketStatus
 {
-    New,
-    Assigned,
-    InProgress,
-    Resolved
-   
+    New=0,
+    Assigned=1,
+    InProgress=2,
+    Resolved=3
 }
