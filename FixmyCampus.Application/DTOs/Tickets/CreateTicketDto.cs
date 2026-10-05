@@ -13,11 +13,16 @@ public class CreateTicketDto
     public string Description { get; set; } = string.Empty;
 
     [Required]
-    [MaxLength(200)]
-    public string Location { get; set; } = string.Empty;
+    [MaxLength(100)]
+    public Building Building { get; set; } = Building.MainLibrary;
+
+    [Required]
+    [MaxLength(50)]
+    public string Room { get; set; } = string.Empty;
 
     [Required]
     public TicketCategory Category { get; set; }
 
-    public TicketPriority Priority { get; set; } = TicketPriority.Medium;
+    public TicketPriority Priority { get; set; }
+        = TicketPriority.Medium;
 }

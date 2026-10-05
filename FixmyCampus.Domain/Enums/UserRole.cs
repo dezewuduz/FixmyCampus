@@ -2,7 +2,7 @@ namespace FixmyCampus.Domain.Enums;
 
 public enum UserRole
 {
-    User,
-    Technician,
-    Admin
+    User=1,
+    Technician=2,
+    Admin=3
 }

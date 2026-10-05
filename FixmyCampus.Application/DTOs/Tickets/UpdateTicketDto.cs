@@ -13,8 +13,12 @@ public class UpdateTicketDto
     public string Description { get; set; } = string.Empty;
 
     [Required]
-    [MaxLength(200)]
-    public string Location { get; set; } = string.Empty;
+    [MaxLength(100)]
+    public Building Building { get; set; } = Building.MainLibrary;
+
+    [Required]
+    [MaxLength(50)]
+    public string Room { get; set; } = string.Empty;
 
     public TicketCategory Category { get; set; }
 

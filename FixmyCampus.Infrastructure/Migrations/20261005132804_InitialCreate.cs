@@ -45,7 +45,8 @@ namespace FixmyCampus.Infrastructure.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     Description = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: false),
-                    Location = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    Building = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    Room = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     Category = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
                     Priority = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
                     Status = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
@@ -116,6 +117,11 @@ namespace FixmyCampus.Infrastructure.Migrations
                 name: "IX_Tickets_AssignedTechnicianId",
                 table: "Tickets",
                 column: "AssignedTechnicianId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tickets_Building",
+                table: "Tickets",
+                column: "Building");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tickets_CreatedById",

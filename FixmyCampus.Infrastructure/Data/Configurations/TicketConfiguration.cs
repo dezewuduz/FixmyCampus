@@ -20,9 +20,13 @@ public class TicketConfiguration : IEntityTypeConfiguration<Ticket>
             .IsRequired()
             .HasMaxLength(2000);
 
-        builder.Property(t => t.Location)
+       builder.Property(t => t.Building)
+           .HasConversion<string>()
+            .HasMaxLength(50)
+             .IsRequired();
+        builder.Property(t => t.Room)
             .IsRequired()
-            .HasMaxLength(200);
+            .HasMaxLength(50);
 
         builder.Property(t => t.Category)
             .HasConversion<string>()
@@ -52,6 +56,7 @@ public class TicketConfiguration : IEntityTypeConfiguration<Ticket>
 
         // Common query filters
         builder.HasIndex(t => t.Status);
+        builder.HasIndex(t => t.Building);
         builder.HasIndex(t => t.CreatedById);
         builder.HasIndex(t => t.AssignedTechnicianId);
     }

@@ -7,7 +7,8 @@ public class Ticket
     public int Id { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
-    public string Location { get; set; } = string.Empty;   // e.g. "Block B, Room 204"
+    public Building Building { get; set; } = Building.MainLibrary;
+    public string Room { get; set; } = string.Empty;
     public TicketCategory Category { get; set; }
     public TicketPriority Priority { get; set; } = TicketPriority.Medium;
     public TicketStatus Status { get; set; } = TicketStatus.New;

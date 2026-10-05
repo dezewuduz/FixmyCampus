@@ -33,6 +33,11 @@ namespace FixmyCampus.Infrastructure.Migrations
                     b.Property<int?>("AssignedTechnicianId")
                         .HasColumnType("integer");
 
+                    b.Property<string>("Building")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
                     b.Property<string>("Category")
                         .IsRequired()
                         .HasMaxLength(30)
@@ -49,11 +54,6 @@ namespace FixmyCampus.Infrastructure.Migrations
                         .HasMaxLength(2000)
                         .HasColumnType("character varying(2000)");
 
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("character varying(200)");
-
                     b.Property<string>("Priority")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -61,6 +61,11 @@ namespace FixmyCampus.Infrastructure.Migrations
 
                     b.Property<DateTime?>("ResolvedAt")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Room")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<string>("Status")
                         .IsRequired()
@@ -78,6 +83,8 @@ namespace FixmyCampus.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AssignedTechnicianId");
+
+                    b.HasIndex("Building");
 
                     b.HasIndex("CreatedById");
 

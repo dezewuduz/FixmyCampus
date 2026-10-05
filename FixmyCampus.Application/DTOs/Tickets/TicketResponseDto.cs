@@ -10,7 +10,9 @@ public class TicketResponseDto
 
     public string Description { get; set; } = string.Empty;
 
-    public string Location { get; set; } = string.Empty;
+    public Building Building { get; set; } = Building.MainLibrary;
+
+public string Room { get; set; } = string.Empty;
 
     public TicketCategory Category { get; set; }
 
@@ -24,11 +26,11 @@ public class TicketResponseDto
 
     public DateTime? ResolvedAt { get; set; }
 
-    public Guid CreatedById { get; set; }
+    public int CreatedById { get; set; }
 
     public string? CreatedByName { get; set; }
 
-    public int AssignedTechnicianId { get; set; }
+    public int? AssignedTechnicianId { get; set; }
 
     public string? AssignedTechnicianName { get; set; }
 }
